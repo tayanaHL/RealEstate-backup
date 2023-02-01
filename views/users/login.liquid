@@ -1,0 +1,26 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div id="logo-container">
+    <div id="text-container">
+      <h1>GTA Real Estate</h1>
+
+      <h2>YOLO REALITY</h2>
+    </div>
+  </div>
+<div class="container-sm">
+    <form action="/users/login" method="POST">
+        <fieldset>
+            <legend>Log In</legend>
+            <label class="form-label">Username: </label>
+            <input type="text" name="username" placeholder="username" class="form-control" required>
+            <label class="form-label">Password</label>
+            <input type="password" name="password" placeholder="enter password" class="form-control" required>
+        </fieldset>
+        <input type="submit" value="Log In" class="btn btn-success">
+    </form>
+</div>
+<div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+
+{% endblock %}

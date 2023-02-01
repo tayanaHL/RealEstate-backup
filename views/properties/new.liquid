@@ -1,0 +1,47 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+    <div class="container-sm">
+        <form action="/properties/" method="POST">
+            <fieldset>
+                <legend>Create New Property</legend>
+                <label class="form-label">Location:</label>
+                <input 
+                    type="text" class="form-control" 
+                    name="location" placeholder="Where is the property located?"
+                    required
+                >
+                <label class="form-label">Image:</label>
+                <input 
+                    type="text" class="form-control" 
+                    name="images" placeholder="Paste URL here"
+                    required
+                >
+              
+                <label class="form-label">Price:</label>
+                <input 
+                    type="Number" class="form-control" 
+                    name="price" placeholder="What is the price for this property?"
+                    required
+                >
+                <label class="form-label">Description:</label>
+                <input 
+                    type="text" class="form-control" 
+                    name="description" placeholder="Further details about the property"
+                    required
+                >
+                <label class="form-label">For Sale:</label>
+                <input 
+                    type="checkbox" class="form-check-control" 
+                    name="forSale" placeholder="Are you looking to rent or own?"
+                    required
+                >
+            </fieldset>
+            <input type="submit" class="btn btn-success" value="Create New Property">
+        </form>
+    </div>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  
+  
+{% endblock %}

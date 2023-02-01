@@ -1,0 +1,39 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+    <div class="container-sm">
+        <form action="/properties/{{property.id}}?_method=PUT" method="POST">
+            <fieldset>
+                <legend>Edit</legend>
+                <label class="form-label">Price:</label>
+                <input 
+                    type="number" class="form-control" 
+                    name="price" placeholder="What's the new price?"
+                    required value="{{ property.price }}"
+                >
+                
+                <label class="form-label">Location:</label>
+                <input 
+                    type="text" class="form-control" 
+                    name="location" placeholder="What's the new location?"
+                    required value="{{ property.location }}"
+                >
+            
+                <label class="form-label">For Sale?</label>
+                <input 
+                    type="checkbox" class="form-check-control" 
+                    name="forSale"
+                    {% if property.forSale %}
+                        checked
+                    {% endif %}
+                >
+            </fieldset>
+            <input type="submit" class="btn btn-success" value="Edit">
+            <a href="/properties/{{ property.id }}" class="btn btn-warning">Back</a>
+        </form>
+    </div>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  
+  
+{% endblock %}
